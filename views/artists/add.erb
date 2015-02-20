@@ -1,0 +1,13 @@
+<%= erb :'partials/_header' %>
+<br>
+<form action="/artists" method="POST">
+  <div class = "form-group">
+    <label for="name">Add a new Artist: </label>
+    <input type="text" autofocus required class="form-control" name="name" id="name">
+  </div>
+  <div>
+    <input type="submit" class ="btn btn-success" value="Add">
+  </div>
+</form>
+
+<%= erb :'partials/_footer' %>

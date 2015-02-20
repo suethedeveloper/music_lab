@@ -1,0 +1,29 @@
+<%= erb :'partials/_header' %>
+<h1>List of all the artist</h1>
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th colspan="2">Name</th>
+    </tr>
+  </thead>
+  <tbody>
+<% @artists.each do |artist|  %>
+  <tr>
+    <td><%= artist["name"] %></td>
+    <td><a href="/artists/<%= artist.id%>">Show More Info</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><a href="/artists/<%= artist.id%>/songs">See songs</a></td>
+  </tr>  
+<% end %>
+</tbody>
+</table>
+
+
+  <a href="/artists/new">Add a new artist!</a>
+
+
+
+
+<%= erb :'partials/_footer' %>

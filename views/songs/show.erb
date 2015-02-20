@@ -1,0 +1,9 @@
+<%= erb :'partials/_header' %>
+  <h1>Here is a detail of the song</h1>
+  <p>
+    Name: <%= @song.name%>
+  </p>
+  <p>
+    <a href="/artists/<%= @artist_id %>/songs/<%= @song.id %>/edit">Edit this song</a>
+  </p>
+<%= erb :'partials/_footer' %>

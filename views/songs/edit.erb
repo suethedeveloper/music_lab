@@ -1,0 +1,19 @@
+<%= erb :'partials/_header' %>
+<br>
+<form action="/artists/<%= @artist_id %>/songs/<%=@song.id %>" method="POST">
+  <input type="hidden" name="_method" value="put">
+  <p class = "form-group">
+    <label for="name">Name of Song: </label>
+    <input type="text" class="form-control" name="name" id="name" value="<%= @song.name %>">
+  </p>
+  <p>
+    <input class ="btn btn-warning"type="submit" value="Edit">
+  </p>
+</form>
+
+<form action="/artists/<%= @artist_id %>/songs/<%=@song.id %>" method="POST">
+  <input type="hidden" name="_method" value="delete">
+  <input class ="btn btn-danger" type="submit" value="Delete">
+</form>
+
+<%= erb :'partials/_footer' %>
